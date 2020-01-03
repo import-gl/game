@@ -35,7 +35,6 @@ steps:
     repository: 'akshay77/testing_repo'
     command: 'build'
     Dockerfile: 'Dockerfile'
-    tags: 'test77'
     arguments: '--build-arg WAR_FILE=$(Build.ArtifactStagingDirectory)/target/*.war'
     addPipelineData: false
     
