@@ -34,7 +34,7 @@ steps:
     repository: 'akshay77/testing_repo'
     command: 'build'
     Dockerfile: 'Dockerfile'
-    arguments: '--build-arg WAR_FILE=$(Build.ArtifactStagingDirectory)/target/SimpleTomcatWebApp.war'
+    arguments: '--build-arg value=$(Build.ArtifactStagingDirectory)/target/SimpleTomcatWebApp.war'
     addPipelineData: false
     
 - task: Docker@2
