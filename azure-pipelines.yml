@@ -51,8 +51,7 @@ steps:
     repository: 'akshay77/testing_repo'
     command: 'build'
     Dockerfile: 'Dockerfile'
-    buildContext: '/$(System.ArtifactsDirectory)'
-    arguments: '--build-arg WAR=$(System.ArtifactsDirectory)'
+    arguments: '--build-arg WAR=/$(System.ArtifactsDirectory)'
 
 - script: ls $(System.ArtifactsDirectory)
 
