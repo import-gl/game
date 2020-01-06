@@ -27,6 +27,7 @@ steps:
     SourceFolder: '$(build.sourcesdirectory)'
     Contents: 'target/**/*.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: true
 
 - task: Docker@2
   inputs:
