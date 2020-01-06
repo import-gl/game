@@ -45,18 +45,18 @@ steps:
     downloadPath: '$(System.ArtifactsDirectory)'
 
 
-#- task: Docker@2
-#  inputs:
-#    containerRegistry: 'docker_connection'
-#    repository: 'akshay77/testing_repo'
-#    command: 'build'
-#    Dockerfile: 'Dockerfile'
-#    arguments: '--build-arg WAR=$(System.ArtifactsDirectory)'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker_connection'
+    repository: 'akshay77/testing_repo'
+    command: 'build'
+    Dockerfile: 'Dockerfile'
+    arguments: '--build-arg WAR=$(System.ArtifactsDirectory)'
 
 - script: ls $(System.ArtifactsDirectory)
 
-#- task: Docker@2
-#  inputs:
-#    containerRegistry: 'docker_connection'
-#    repository: 'akshay77/testing_repo'
-#    command: 'push'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker_connection'
+    repository: 'akshay77/testing_repo'
+    command: 'push'
