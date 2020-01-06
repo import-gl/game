@@ -37,13 +37,21 @@ steps:
     ArtifactName: 'testapp'
     publishLocation: 'Container'
 
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'testapp'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
+
 - task: Docker@2
   inputs:
     containerRegistry: 'docker_connection'
     repository: 'akshay77/testing_repo'
     command: 'build'
     Dockerfile: 'Dockerfile'
-    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/*.war'
+    arguments: '--build-arg WAR=$(System.ArtifactsDirectory)'
 
 
 - task: Docker@2
