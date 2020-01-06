@@ -1,5 +1,5 @@
 FROM tomcat:8.0
-#MAINTAINER akshay
+MAINTAINER akshay
 
 
 #ARG WAR
