@@ -4,7 +4,7 @@ MAINTAINER akshay
 
 ARG WAR
 #RUN echo "value of war is $WAR"
-COPY ${WAR} /usr/local/tomcat/webapps/
+COPY ${WAR}/ /usr/local/tomcat/webapps/
 
 
 #ARG WAR
