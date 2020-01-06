@@ -53,7 +53,7 @@ steps:
 #    Dockerfile: 'Dockerfile'
 #    arguments: '--build-arg WAR=$(System.ArtifactsDirectory)'
 
-- script: echo $(System.ArtifactsDirectory)
+- script: ls $(System.ArtifactsDirectory)
 
 #- task: Docker@2
 #  inputs:
