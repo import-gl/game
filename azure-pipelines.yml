@@ -37,17 +37,17 @@ steps:
     ArtifactName: 'testapp'
     publishLocation: 'Container'
 
-#- task: Docker@2
-#  inputs:
-#    containerRegistry: 'docker_connection'
-#    repository: 'akshay77/testing_repo'
-#    command: 'build'
-#    Dockerfile: 'Dockerfile'
-#    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/**/*.war'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker_connection'
+    repository: 'akshay77/testing_repo'
+    command: 'build'
+    Dockerfile: 'Dockerfile'
+    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/*.war'
 
 
-#- task: Docker@2
-#  inputs:
-#    containerRegistry: 'docker_connection'
-#    repository: 'akshay77/testing_repo'
-#    command: 'push'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker_connection'
+    repository: 'akshay77/testing_repo'
+    command: 'push'
