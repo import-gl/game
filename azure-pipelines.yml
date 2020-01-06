@@ -37,7 +37,7 @@ steps:
 #    repository: 'akshay77/testing_repo'
 #    command: 'build'
 #    Dockerfile: 'Dockerfile'
-#    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/target/*.war'
+#    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/*.war'
 
 
 #- task: Docker@2
