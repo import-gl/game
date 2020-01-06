@@ -1,7 +1,12 @@
-FROM tomcat:8.0
-MAINTAINER akshay
+#FROM tomcat:8.0
+#MAINTAINER akshay
+
+
+#ARG WAR
+#RUN echo "value of war is $WAR"
+#COPY ${WAR} /usr/local/tomcat/webapps/
 
 
 ARG WAR
-RUN echo "value of war is $WAR"
-#COPY ${WAR} /usr/local/tomcat/webapps/
+
+RUN echo "Oh dang look at that $WAR"
