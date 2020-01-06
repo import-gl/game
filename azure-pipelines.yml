@@ -29,18 +29,20 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'docker_connection'
-    repository: 'akshay77/testing_repo'
-    command: 'build'
-    Dockerfile: 'Dockerfile'
-    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/target/*.war'
+- script: echo $(build.artifactstagingdirectory)
+
+#- task: Docker@2
+#  inputs:
+#    containerRegistry: 'docker_connection'
+#    repository: 'akshay77/testing_repo'
+#    command: 'build'
+#    Dockerfile: 'Dockerfile'
+#    arguments: '--build-arg WAR=$(build.artifactstagingdirectory)/target/*.war'
 
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'docker_connection'
-    repository: 'akshay77/testing_repo'
-    command: 'push'
+#- task: Docker@2
+#  inputs:
+#    containerRegistry: 'docker_connection'
+#    repository: 'akshay77/testing_repo'
+#    command: 'push'
 
